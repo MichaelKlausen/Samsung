@@ -9,14 +9,14 @@ Samsung project for Coursera Getting and Cleaning Data class
 
 The run_Analysis.R file loads data from the "UCI HAR Dataset" folder and transforms it to a tidy dataset through a series of 8 steps:
 
-*Step 1: Load feature data and combine train and test to one dataset with the rigth labels
-*Step 2: Load subject data and combine it to one dataset
-*Step 3: Find feature columns with mean and std but NOT with meanFreq using the grep and match functions
-*Step 4: Find meaningfull names for activity variable by matching scores and labels 
-*Step 5: Combine activity, subject and feature data to one full dataset
-*Step 6: Rename variables to descriptive names using the gsub function 
-*Step 7: Create tidy dataset with mean values of each variable using the aggregate function.
-*Step 8: Write output to .txt file by write.table
+* Step 1: Load feature data and combine train and test to one dataset with the rigth labels
+* Step 2: Load subject data and combine it to one dataset
+* Step 3: Find feature columns with mean and std but NOT with meanFreq using the grep and match functions
+* Step 4: Find meaningfull names for activity variable by matching scores and labels 
+* Step 5: Combine activity, subject and feature data to one full dataset
+* Step 6: Rename variables to descriptive names using the gsub function 
+* Step 7: Create tidy dataset with mean values of each variable using the aggregate function.
+* Step 8: Write output to .txt file by write.table
 
 Each step is clearly commented in the R-code.
 
@@ -35,23 +35,23 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-*TimeBodyAccelerometer-XYZ
-*TimeGravityAccelerometer-XYZ
-*TimeBodyAccelerometerJerk-XYZ
-*TimeBodyGyroscope-XYZ
-*TimeBodyGyroscopeJerk-XYZ
-*TimeBodyAccelerometerMagnitude
-*TimeGravityAccelerometerMagnitude
-*TimeBodyAccelerometerJerkMagnitude
-*TimeBodyGyroscopeMagnitude
-*TimeBodyGyroscopeJerkMagnitude
-*FrequencyBodyAccelerometer-XYZ
-*FrequencyBodyAccelerometerJerk-XYZ
-*FrequencyBodyGyroscope-XYZ
-*FrequencyBodyAccelerometerMagnitude
-*FrequencyBodyAccelerometerJerkMagnitude
-*FrequencyBodyGyroscopeMagnitude
-*FrequencyBodyGyroscopeJerkMagnitude
+* TimeBodyAccelerometer-XYZ
+* TimeGravityAccelerometer-XYZ
+* TimeBodyAccelerometerJerk-XYZ
+* TimeBodyGyroscope-XYZ
+* TimeBodyGyroscopeJerk-XYZ
+* TimeBodyAccelerometerMagnitude
+* TimeGravityAccelerometerMagnitude
+* TimeBodyAccelerometerJerkMagnitude
+* TimeBodyGyroscopeMagnitude
+* TimeBodyGyroscopeJerkMagnitude
+* FrequencyBodyAccelerometer-XYZ
+* FrequencyBodyAccelerometerJerk-XYZ
+* FrequencyBodyGyroscope-XYZ
+* FrequencyBodyAccelerometerMagnitude
+* FrequencyBodyAccelerometerJerkMagnitude
+* FrequencyBodyGyroscopeMagnitude
+* FrequencyBodyGyroscopeJerkMagnitude
 
 The set of variables that were estimated from these signals are: 
 
@@ -61,9 +61,9 @@ std: Standard deviation
 Each observation is associated with a test subject being measured. Each subject is given a unique subject number stored under the variable: "Subject".  
 
 Finally each observation is associated with a certain activity that the test subject was performing. The activity can range between these values and is stored under the name "Activity" in the dataset: 
-*1 WALKING
-*2 WALKING_UPSTAIRS
-*3 WALKING_DOWNSTAIRS
-*4 SITTING
-*5 STANDING
-*6 LAYING
+* 1 WALKING
+* 2 WALKING_UPSTAIRS
+* 3 WALKING_DOWNSTAIRS
+* 4 SITTING
+* 5 STANDING
+* 6 LAYING
