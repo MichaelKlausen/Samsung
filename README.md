@@ -9,16 +9,33 @@ Samsung project for Coursera Getting and Cleaning Data class
 
 The run_Analysis.R file loads data from the "UCI HAR Dataset" folder and transforms it to a tidy dataset through a series of 8 steps:
 
-* Step 1: Load feature data and combine train and test to one dataset with the rigth labels
+* Step 1: Load feature data and combine train and test to one dataset with the right labels
+	* X_test.txt & X_train.txt is assigned to two variables. 
+	* Feature labels from features.txt is assigned to a variable.
+	* The labels are added to each dataset through the colnames function.
+	* The two datasets are appended using the rbind function. 
 * Step 2: Load subject data and combine it to one dataset
+	* As in step 1, subject_test.txt and subject_train.txt are stored in two variables.
+	* A combined dataset is made using the rbind function.
 * Step 3: Find feature columns with mean and std but NOT with meanFreq using the grep and match functions
+	* In this step R looks through the column names of the features dataset to find all variables with the word "mean" and "std".
+	* Unfortunately - there are some variables in the dataset called meanFreq, which are removed using a match function.
+	* the dataset is finally subset with the chosen columns. 
 * Step 4: Find meaningfull names for activity variable by matching scores and labels 
+	* Data on the activity number for each observation is stored in two different datasets: Y_test.txt and Y_train.txt. These are stored to two variables.
+	* The file activity_labels.txt stores the key between a certain activity number and the associated activity labels. These activity labels are loaded to the the test & train dataset using a match function.
+	* The two datasets are appended using the rbind function.
 * Step 5: Combine activity, subject and feature data to one full dataset
+	* A cbind function is used to merge data on features, activities and subjects together to one full dataset
 * Step 6: Rename variables to descriptive names using the gsub function 
+	* The columns names of the full dataset is stored to a variable for manipulation.
+	* Using the gsub function a series of transformations are made to the header strings. For example all headers with the word "acc" is changed to "Accelerometer".
+	* The manipulated strings are then used as the new column names of the dataset.
 * Step 7: Create tidy dataset with mean values of each variable using the aggregate function.
+	* A quite simple aggregate function is used to calculate the mean of all variables in the dataset grouped by the subject and the activity.
 * Step 8: Write output to .txt file by write.table
 
-Each step is clearly commented in the R-code.
+Each step is commented in the R-code for easy tracking.
 
 
 
